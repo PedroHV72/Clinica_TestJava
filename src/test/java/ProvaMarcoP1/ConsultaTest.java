@@ -75,40 +75,4 @@ public class ConsultaTest {
         assertEquals("Consulta sem receita", consulta.getTipoReceita());
     }
 
-    @Test
-    void deveRetornarTipoReceita() {
-        Receita receita = createMock(Receita.class);
-        expect(receita.getTipo()).andReturn("Amarela");
-        replay(receita);
-
-        assertEquals("Amarela", receita.getTipo());
-    }
-
-    @Test
-    void deveRetornarPaciente() {
-        Paciente paciente = createMock(Paciente.class);
-        expect(paciente.getNome()).andReturn("Henrique");
-        replay(paciente);
-
-        assertEquals("Henrique", paciente.getNome());
-    }
-
-    @Test
-    void deveRetornarMedico() {
-        Medico medico = createMock(Medico.class);
-        expect(medico.getNome()).andReturn("Pedro");
-        replay(medico);
-
-        assertEquals("Pedro", medico.getNome());
-    }
-
-    @Test
-    void deveRetornarCrmMedico() {
-        Medico medico = createMock(Medico.class);
-        expect(medico.getNome()).andReturn("123");
-        replay(medico);
-
-        assertEquals("123", medico.getNome());
-    }
-
 }

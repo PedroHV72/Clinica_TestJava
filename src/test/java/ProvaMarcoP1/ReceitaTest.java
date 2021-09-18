@@ -46,4 +46,13 @@ public class ReceitaTest {
         assertEquals(medicamentos, receita.getMedicamentoList());
     }
 
+    @Test
+    void deveRetornarTipoReceitaMock() {
+        Receita receita = createMock(Receita.class);
+        expect(receita.getTipo()).andReturn("Amarela");
+        replay(receita);
+
+        assertEquals("Amarela", receita.getTipo());
+    }
+
 }
